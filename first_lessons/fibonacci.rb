@@ -8,5 +8,5 @@ fibonacci = 1
 
 while fibonacci <= number
   puts fibonacci
-  fibonacciPrev, fibonacci = fibonacci, fibonacciPrev +fibonacci
+  fibonacciPrev, fibonacci = fibonacci, fibonacciPrev + fibonacci
 end
