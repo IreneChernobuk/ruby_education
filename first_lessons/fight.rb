@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Player
   attr_accessor :name, :health, :power
+
   def initialize(n, h, pow)
     @name = n
     @health = h
@@ -7,11 +10,11 @@ class Player
   end
 
   def isAlive
-    @health > 0
+    @health.positive?
   end
 
   def hit(opponent)
-    opponent.health -= self.power
+    opponent.health -= power
   end
 
   def to_s
@@ -31,21 +34,21 @@ def fight(p1, p2)
   elsif p2.isAlive
     puts "#{p2.name} ПОБЕДИЛ!"
   else
-    puts "НИЧЬЯ!"
+    puts 'НИЧЬЯ!'
   end
 end
 
 def show_info(*p)
-  p.each { |x| puts x}
+  p.each { |x| puts x }
 end
 
 # создаем игроков
-puts "ИНФОРМАЦИЯ ОБ ИГРОКАХ"
-p1 = Player.new("Игрок 1", 1 + rand(100), 1 + rand(20))
-p2 = Player.new("Игрок 2", 1 + rand(100), 1 + rand(20))
+puts 'ИНФОРМАЦИЯ ОБ ИГРОКАХ'
+p1 = Player.new('Игрок 1', rand(1..100), rand(1..20))
+p2 = Player.new('Игрок 2', rand(1..100), rand(1..20))
 
 # показываем информацию об игроках
 show_info(p1, p2)
 
-puts "ДА НАЧНЕТСЯ БОЙ!"
+puts 'ДА НАЧНЕТСЯ БОЙ!'
 fight(p1, p2)

@@ -1,15 +1,16 @@
+# frozen_string_literal: true
+
 def is_negatine(num)
-  if num < 0
-    return true
-  else
-    return false
-  end
+  return true if num.negative?
+
+
+  false
 end
 
 puts is_negatine(5)
 
 def square(num)
-  return num ** 2
+  num**2
 end
 
 puts square(88)

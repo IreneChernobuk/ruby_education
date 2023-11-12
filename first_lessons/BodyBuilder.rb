@@ -1,17 +1,18 @@
+# frozen_string_literal: true
+
 class BodyBuilder
   def initialize
-  @triceps = 0
-  @biceps = 0
-  @deltovidka = 0
-end
+    @triceps = 0
+    @biceps = 0
+    @deltovidka = 0
+  end
 
-  def pump(muscle)
-    case
-    when 'triceps'
+  def pump(_muscle)
+    if 'triceps'
       @triceps += 1
-    when 'biceps'
+    elsif 'biceps'
       @biceps += 1
-    when 'deltovidka'
+    elsif 'deltovidka'
       @deltovidka += 1
     end
   end

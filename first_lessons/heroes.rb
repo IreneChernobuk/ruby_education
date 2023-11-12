@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 puts 'Врага какого персонажа вы хотите узнать?'
-hero =gets.chomp
+hero = gets.chomp
 case hero
 when 'Бэтмен', 'Batman', 'бэтмен', 'batman'
   puts 'Джокер!'

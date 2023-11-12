@@ -1,19 +1,22 @@
-i = 0
-begin
-  puts i
-  i += 1
-end while i < 5
+# frozen_string_literal: true
 
-begin
+i = 0
+loop do
   puts i
   i += 1
-end until i > 3
+  break unless i < 5
+end
+
+loop do
+  puts i
+  i += 1
+  break if i > 3
+end
 
 j = 0
 while j < 5
-  if j == 3
-    break
-  end
+  break if j == 3
+
   puts j
   j += 1
 end
@@ -21,17 +24,16 @@ end
 a = 0
 while a < 5
   a += 1
-  if a == 3
-    next
-  end
+  next if a == 3
+
   puts a
 end
 
 loop do
-  puts "Enter a number"
+  puts 'Enter a number'
   number = gets.chomp.to_i
   if number > 100
-    puts "Breaking the loop"
+    puts 'Breaking the loop'
     break
   end
 end
