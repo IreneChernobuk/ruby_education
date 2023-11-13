@@ -1,9 +1,14 @@
-if (rand(11) == 1)
-  puts "Ребро"
-else
-  if (rand(2) == 1)
-    puts "Решка"
-  else
-    puts "Орел"
+x = gets.to_s
+
+class Writer
+  def initialize(x)
+    @x = x
+  end
+
+  def back
+    puts "#{@x}"
   end
 end
+
+book = Writer.new(x)
+book.back

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 a = 5
 b = 4
 
@@ -5,9 +7,7 @@ if a <= b
   puts "#{a} is less than or equal #{b}"
 elsif a != b
   puts "#{a} not equal to #{b}"
-  if a >= b
-    puts "#{a} is greater than #{b}"
-  end
+  puts "#{a} is greater than #{b}" if a >= b
 end
 
 if a > 10
@@ -15,76 +15,42 @@ if a > 10
 elsif b < 2
   puts "#{b} < 2"
 else
-  puts "else statement"
+  puts 'else statement'
 end
 
-if a > b and b > 0
-  puts "Both conditionals are true"
+puts 'Both conditionals are true' if (a > b) && b.positive?
+
+puts 'At last one of the conditionals is true' if (a < b) || b.positive?
+
+puts 'a is greater than b' if a > b
+
+if a > b
+  'a greater than b'
+elsif a < b
+  'a less than b'
+else
+  'a equal to b'
 end
-
-if a < b or b > 0
-  puts "At last one of the conditionals is true"
-end
-
-puts "a is greater than b" if a > b
-
-message = if a > b
-            "a greater than b"
-          elsif a < b
-            "a less than b"
-          else
-            "a equal to b"
-          end
 
 is_online = false
 
-unless is_online
-  puts "maintenance"
+puts 'maintenance' unless is_online
+
+if is_online
+  'homepage'
+else
+  'maintenance'
 end
 
-page = unless is_online
-         "maintenance"
-       else
-         "homepage"
-       end
-
-page = is_online ? "homepage" : "maintenance"
+page = is_online ? 'homepage' : 'maintenance'
 puts page
 
-puts "maintenance" unless is_online
+puts 'maintenance' unless is_online
 
-unless is_online then
-  puts "maintenance"
+if is_online
+  puts 'homepage'
 else
-  puts "homepage"
+  puts 'maintenance'
 end
 
-if is_online then
-  puts "homepage"
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+puts 'homepage' if is_online

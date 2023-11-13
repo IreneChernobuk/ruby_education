@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../ruby_education/first_lessons/BodyBuilder'
 # Создаем трех качков
 body_builder1 = BodyBuilder.new

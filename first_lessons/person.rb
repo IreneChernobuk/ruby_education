@@ -1,4 +1,6 @@
-puts "У нас есть три человека:"
+# frozen_string_literal: true
+
+puts 'У нас есть три человека:'
 
 class Person
   def initializeputs(name, middle_name, age)
@@ -16,6 +18,6 @@ class Person
   end
 end
 
-gavrila = Person.new("Гаврила", "Петрович", 58).fullNane
-fedor = Person.new("Фёдор", "Петрович", 21).fullNane
-vasilij = Person.new("Василий", "Алибабаевич", 99).fullNane
+Person.new('Гаврила', 'Петрович', 58).fullNane
+Person.new('Фёдор', 'Петрович', 21).fullNane
+Person.new('Василий', 'Алибабаевич', 99).fullNane
