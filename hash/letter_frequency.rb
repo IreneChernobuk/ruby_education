@@ -19,4 +19,5 @@ text = gets.chomp
 result = letter_frequency(text).sort
 for key, value in result
   puts "#{key} => #{value}"
-  end
+end
+
